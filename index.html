@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <title>demo of slide show</title>
+    <link rel="stylesheet" href="./index.css" />
+</head>
+
+<body>
+    <div class="slider">
+        <div class="slide slide1">
+            <!-- <img class="lazy" data-src="https://ik.imagekit.io/demo/img/image1.jpeg?tr=w-400,h-300" /> -->
+            <span>TEXT</span>
+        </div>
+        <div class="slide slide2">
+            <!-- <img class="lazy" data-src="https://ik.imagekit.io/demo/img/image2.jpeg?tr=w-400,h-300" /> -->
+
+            <span>TEXT</span>
+        </div>
+        <div class="slide slide3">
+            <!-- <img class="lazy" data-src="https://ik.imagekit.io/demo/img/image3.jpg?tr=w-400,h-300" /> -->
+
+            <span>TEXT</span>
+        </div>
+        <div class="slide slide4">
+            <!-- <img class="lazy" data-src="https://ik.imagekit.io/demo/img/image4.jpeg?tr=w-400,h-300" /> -->
+
+            <span>TEXT</span>
+        </div>
+        <div class="slide slide5">
+            <!-- <img class="lazy" data-src="https://ik.imagekit.io/demo/img/image5.jpeg?tr=w-400,h-300" /> -->
+
+            <span>TEXT</span>
+        </div>
+    </div>
+    <a class="arrow-left" href="javascript:void(0);"></a>
+    <a class="arrow-right" href="javascript:void(0);"></a>
+    <div class="dots-wrapper"></div>
+
+</body>
+
+
+<script src="./index.js"></script>
+<script>
+    var sliders = new SliderPlugin({
+        swipe: true,
+        curSlide: 4,
+        transition: {
+            speed: 150,
+            easing: 'ease-in-out'
+        },
+        afterChangeSlide: function () {
+            console.log('afterChangeSlide');
+        }
+    })
+
+    sliders.init();
+
+    console.log(sliders)
+
+
+</script>
+
+</html>
